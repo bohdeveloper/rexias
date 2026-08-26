@@ -1,0 +1,23 @@
+# Maven
+target/
+*.war
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse / workspace (el workspace de Eclipse es esta misma carpeta)
+.metadata/
+Servers/
+.settings/
+.project
+.classpath
+.factorypath
+bin/
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Datos locales de Docker (el volumen de Oracle vive dentro de Docker, no aqui)

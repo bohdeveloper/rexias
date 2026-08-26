@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
+               http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+  <!--
+    Placeholder de la Fase 0: todo permitido, sin login. La Fase 2 sustituye esto
+    por autenticacion real y control de acceso por rol (VETERINARIO, TITULAR,
+    NUCLEO_ZOOLOXICO, INSPECTOR, ADMIN) - ver spec.md secciones 2 y 3.
+  -->
+  <http pattern="/**" security="none"/>
+
+  <authentication-manager/>
+
+</beans:beans>

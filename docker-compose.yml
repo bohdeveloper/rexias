@@ -1,0 +1,22 @@
+services:
+  oracle-xe:
+    image: gvenzl/oracle-xe:21-slim-faststart
+    container_name: rexia-oracle
+    environment:
+      ORACLE_PASSWORD: ${ORACLE_SYS_PASSWORD:-rexia_sys_2026}
+      APP_USER: rexia
+      APP_USER_PASSWORD: rexia_dev_2026
+    ports:
+      - "1522:1521"
+    volumes:
+      - rexia-oracle-data:/opt/oracle/oradata
+      - ./docker/init:/container-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+volumes:
+  rexia-oracle-data:
