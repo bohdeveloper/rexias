@@ -29,5 +29,5 @@ Detalle ampliado y el resto de la metodología (antes/durante/después de desarr
 - Windows. JDK 11 (Eclipse Temurin) instalado en `C:\eclipse\JDK11_temurin`, registrado en Eclipse como Installed JRE aparte — no tocar el JDK 21 del sistema ni el JRE 17 con el que corre Eclipse.
 - Tomcat 9.0.121 registrado como servidor en Eclipse con su JRE puesto explícitamente al JDK 11.
 - Docker Desktop para Oracle XE (y el mock del registro nacional) vía `docker-compose.yml`.
-- Git solo local por ahora — sin remoto en GitHub todavía (ver spec.md §3, decisión D6). No hacer push ni crear remoto sin que Borja lo pida.
+- Remoto en GitHub: `github.com/bohdeveloper/rexias`, rama `main` (ver spec.md §3, decisión D6). No hacer push sin que Borja lo pida explícitamente.
 - Commits solo cuando Borja los pida explícitamente, revisando el diff primero.

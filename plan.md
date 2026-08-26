@@ -9,7 +9,7 @@
 
 | Fase | Estado |
 |---|---|
-| Fase 0 · Andamiaje | ⏳ en curso — entorno de desarrollo listo, falta montar Maven + Docker Compose + config base + DDL |
+| Fase 0 · Andamiaje | ✅ cerrada (2026-08-26) |
 | Fase 1 · Maestros y titulares | ⏳ pendiente |
 | Fase 2 · Seguridad y multilenguaje | ⏳ pendiente |
 | Fase 3 · Identificación de animales | ⏳ pendiente |
@@ -19,7 +19,7 @@
 | Fase 7 · Licencias PPP, documentos e informes | ⏳ pendiente |
 | Fase 8 · Cierre | ⏳ pendiente |
 
-**Pendiente inmediato:** terminar de montar la Fase 0 (Claude la monta completa, ver spec.md §6.1) y hacer el primer commit local.
+**Pendiente inmediato:** arrancar la Fase 1 (entidades Titular, Veterinario, Centro veterinario) en modo mentor estricto — Borja implementa.
 
 ## Fase 0 · Andamiaje (en curso — la monta Claude completa)
 
@@ -32,9 +32,11 @@
 - [x] (2026-08-26) Script DDL inicial y datos maestros: `RXA_ESPECIE` (5), `RXA_RAZA` (4), `RXA_CONCELLO` (6) — `docker/init/01_maestros.sql`, autoejecutado por docker-compose
 - [x] (2026-08-26) Verificación end-to-end: `mvn package` construye el WAR; `ApplicationContextSmokeIT` conecta de verdad con el Oracle de Docker; WAR desplegado en un Tomcat 9 aislado respondió `GET /` → 200 con Tiles componiendo el layout correctamente
 - [x] (2026-08-26) README.md de presentación
-- [ ] `git init` local + primer commit
+- [x] (2026-08-26) `git init` local + primer commit (`7cc6c09`) + remoto conectado y pusheado a `github.com/bohdeveloper/rexias` (rama `main`)
 
 **Verificable:** `docker compose up` levanta Oracle y la app responde en `/` — confirmado el 2026-08-26 (ver spec.md §5).
+
+**Fase 0 cerrada (2026-08-26).**
 
 ## Fase 1 · Maestros y titulares
 
