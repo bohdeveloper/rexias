@@ -1,6 +1,8 @@
-# CLAUDE.md — REXIA
+# CLAUDE.md — REXIA (clásico)
 
 Reglas de trabajo para Claude Code en este repositorio. El conocimiento del proyecto (dominio, stack, arquitectura, decisiones, convenciones) vive en **spec.md**; el trabajo pendiente por fases vive en **plan.md**. Este archivo no duplica ese contenido — lo enforza.
+
+> **Este repositorio contiene dos proyectos independientes.** Este `CLAUDE.md` (y el `spec.md`/`plan.md` de esta misma carpeta raíz) rige el REXIA clásico: `pom.xml`, `rexia-core/`, `rexia-web/`. El proyecto hermano `rexia-cloud/` (Java 21, Spring Boot, hexagonal — ver spec.md §3 decisión D9) tiene su propio `CLAUDE.md`/`spec.md`/`plan.md` dentro de esa carpeta; sus reglas y decisiones son independientes de las de aquí.
 
 ## Spec-Driven Development (OBLIGATORIO)
 

@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: rexia-cloud
+  datasource:
+    url: jdbc:postgresql://localhost:5433/rexia_cloud
+    username: rexia_cloud
+    password: rexia_cloud_dev_2026
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

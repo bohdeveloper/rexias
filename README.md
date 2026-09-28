@@ -4,6 +4,8 @@ Proyecto de aprendizaje y portfolio de Borja Olazabal Hernández: un registro au
 
 > Reimplementación original y desde cero. No contiene código, datos ni lógica de negocio de EJIE, Inetum, Bilbomática ni del REGIAC real. Todos los datos de demostración son ficticios.
 
+**Este repositorio contiene dos proyectos independientes**, con dos stacks distintos a propósito: el de aquí (raíz) es este REXIA clásico; [`rexia-cloud/`](rexia-cloud/README.md) es un proyecto hermano que demuestra Java 21, Spring Boot, arquitectura hexagonal, DDD, TDD y AWS simulado sobre el mismo dominio. El porqué de tener los dos: [spec.md §3, decisión D9](spec.md).
+
 ## Estado actual
 
 **Fase 0 · Andamiaje** — cerrada. Estructura Maven multi-módulo, Spring configurado (persistencia, MVC, Tiles, seguridad placeholder), Oracle XE en Docker con datos maestros, y `GET /` verificado end-to-end. Ver [plan.md](plan.md) para el detalle y las fases siguientes.

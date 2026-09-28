@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: rexia-cloud-postgres
+    environment:
+      POSTGRES_DB: rexia_cloud
+      POSTGRES_USER: rexia_cloud
+      POSTGRES_PASSWORD: rexia_cloud_dev_2026
+    ports:
+      # 5433 en el host, no el 5432 por defecto, por si ya tienes un Postgres
+      # local escuchando ahi (mismo criterio que el 1522 de Oracle en rexia-clasico).
+      - "5433:5432"
+    volumes:
+      - rexia-cloud-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rexia_cloud"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  localstack:
+    image: localstack/localstack:3
+    container_name: rexia-cloud-localstack
+    environment:
+      SERVICES: s3,sqs
+    ports:
+      - "4566:4566"
+    volumes:
+      - rexia-cloud-localstack-data:/var/lib/localstack
+
+volumes:
+  rexia-cloud-postgres-data:
+  rexia-cloud-localstack-data:
