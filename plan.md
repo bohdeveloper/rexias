@@ -40,9 +40,28 @@
 
 ## Fase 1 · Maestros y titulares
 
-- [ ] Entidades: Titular, Veterinario, Centro veterinario
-- [ ] CRUD completo de titulares y veterinarios
-- [ ] Layout Tiles + navegación
+Desglose (modo mentor estricto desde aquí — Borja implementa, ver spec.md §6.1):
+
+**Titular**
+- [ ] DDL de `RXA_TITULAR` (+ secuencia), respetando convenciones de spec.md §7
+- [ ] Entidad `Titular` (Java, sin anotaciones) + mapeo `orm.xml`
+- [ ] `TitularRepository` (Spring Data JPA)
+- [ ] `TitularService` (interfaz + impl) con validación básica
+- [ ] `TitularController` (listar con paginación + alta)
+- [ ] Vistas JSP (lista + formulario de alta)
+
+**Veterinario**
+- [ ] DDL de `RXA_VETERINARIO` (+ secuencia)
+- [ ] Entidad `Veterinario` + mapeo `orm.xml`
+- [ ] `VeterinarioRepository`, `VeterinarioService`, `VeterinarioController`
+- [ ] Vistas JSP (lista + formulario de alta)
+
+**Centro veterinario**
+- [ ] Definir campos (pendiente de detallar en spec.md §2 cuando lleguemos aquí)
+- [ ] DDL + entidad + repositorio + servicio + controlador + vistas
+
+**Navegación**
+- [ ] Layout Tiles compartido con menú entre las secciones (titulares / veterinarios)
 
 **Verificable:** se da de alta un titular y un veterinario habilitado, y se listan con paginación.
 
